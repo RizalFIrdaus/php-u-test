@@ -1,0 +1,19 @@
+{
+    "name": "rizalfirdaus/unit-test",
+    "description": "Belajar unit test php menggunakan framework phpunit",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Rizalfirdaus\\UnitTest\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RizalFIrdaus",
+            "email": "rizal.firdaus117@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "9.5.28"
+    }
+}
