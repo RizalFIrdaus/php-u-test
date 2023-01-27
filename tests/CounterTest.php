@@ -6,14 +6,21 @@ use PHPUnit\Framework\TestCase;
 
 class CounterTest extends TestCase
 {
+
+    static private Counter $counter;
+
+    static function setUpBeforeClass(): void
+    {
+        Self::$counter = new Counter();
+    }
+
     public function testCounter()
     {
-        $counter = new Counter();
-        $counter->increment();
-        $counter->increment();
-        $counter->increment();
-        Self::assertEquals(3, $counter->getCounter());
-        return $counter;
+        Self::$counter->increment();
+        Self::$counter->increment();
+        Self::$counter->increment();
+        Self::assertEquals(3, Self::$counter->getCounter());
+        return Self::$counter;
     }
     /**
      * @depends testCounter

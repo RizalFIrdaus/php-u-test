@@ -12,6 +12,10 @@ class HelloTest extends TestCase
     {
         $this->object = new SayHello("Rizal");
     }
+    public function tearDown(): void
+    {
+        echo "Teardown" . PHP_EOL;
+    }
 
 
     public function testHello()
