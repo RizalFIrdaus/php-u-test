@@ -15,6 +15,7 @@ class HelloTest extends TestCase
     public function tearDown(): void
     {
         echo "Teardown" . PHP_EOL;
+        Self::markTestSkipped("Test Hallo skipped");
     }
 
 
