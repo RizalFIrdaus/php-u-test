@@ -3,7 +3,6 @@
 namespace Rizalfirdaus\UnitTest;
 
 use PHPUnit\Framework\TestCase;
-use PHPUnit\Framework\Assert;
 
 class CounterTest extends TestCase
 {

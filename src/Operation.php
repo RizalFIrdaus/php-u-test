@@ -1,10 +1,12 @@
 <?php
 
 
+namespace Rizalfirdaus\UnitTest;
+
 class Operation
 {
 
-    public static function sum(float ...$numbers): float
+    public static function sum(array $numbers): float
     {
         $result = 0;
         foreach ($numbers as $number) {
@@ -14,4 +16,4 @@ class Operation
     }
 }
 
-var_dump(Operation::sum(1, 2, 3, 4));
+var_dump(Operation::sum([1, 2, 3, 4]));
