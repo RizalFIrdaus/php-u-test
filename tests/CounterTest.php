@@ -13,6 +13,15 @@ class CounterTest extends TestCase
         $counter->increment();
         $counter->increment();
         $counter->increment();
-        Assert::assertEquals(3, $counter->getCounter());
+        Self::assertEquals(3, $counter->getCounter());
+        return $counter;
+    }
+    /**
+     * @depends testCounter
+     */
+    public function testEqualsCon(Counter $counter)
+    {
+        $counter->increment();
+        Self::assertEquals(4, $counter->getCounter());
     }
 }
