@@ -19,4 +19,10 @@ class HelloTest extends TestCase
         $this->expectException(\Exception::class);
         $say->Hello();
     }
+    public function testExpectOutput()
+    {
+        $say = new SayHello("Rizal");
+        $say->Hello();
+        $this->expectOutputString("Hello, Rizal !");
+    }
 }
