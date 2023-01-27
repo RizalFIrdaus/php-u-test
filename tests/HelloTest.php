@@ -6,10 +6,17 @@ use PHPUnit\Framework\TestCase;
 
 class HelloTest extends TestCase
 {
+
+    private SayHello $object;
+    public function setUp(): void
+    {
+        $this->object = new SayHello("Rizal");
+    }
+
+
     public function testHello()
     {
-        $say = new SayHello("Rizal");
-        $say->Hello();
+        $this->object->Hello();
         Self::assertClassHasAttribute("name", sayHello::class);
     }
 
@@ -21,8 +28,7 @@ class HelloTest extends TestCase
     }
     public function testExpectOutput()
     {
-        $say = new SayHello("Rizal");
-        $say->Hello();
+        $this->object->Hello();
         $this->expectOutputString("Hello, Rizal !");
     }
 }
