@@ -29,5 +29,6 @@ class CounterTest extends TestCase
     {
         $counter->increment();
         Self::assertEquals(4, $counter->getCounter());
+        Self::markTestIncomplete("Do more");
     }
 }
